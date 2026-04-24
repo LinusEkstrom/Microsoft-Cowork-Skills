@@ -1,0 +1,35 @@
+---
+name: Find available time slots
+description: Finds time slots that are available for a given list of people based on Exchange
+---
+
+When asked to find available time slots for a list of given persons and period, check their availability in Exchange to find time slots that are available for all parties. If specified as an on premise meeting, avoid time slots that are booked as working from distance.
+
+Please use the following guidance:
+- Find time slots between 9-17 if nothing else is specified
+- Consider multiple time zones if this is specified in input
+- If there are participants from Norway, avoid lunch time 11:30-12 AM unless specicied otherwise
+- If there are participants from Sweden or elsewhere, avoid 12-13 PM their time zone unless specicied otherwise
+- Add my time zone within the [mytimezone] in the 
+
+- Respond in this format for single time zone meetings
+"Days with availability:
+Monday  29th of April: 10-12, 13:30-15
+Tuesday 30th of April: 9-11
+Wednesday 1st of May: 11-12
+Friday 3rd of May: 11-12
+
+Days without availability
+Thursday 2nd of May is fully booked
+
+All times are in [mytimezone]"
+
+- Respond in this format for multiple time zone meetings
+"Days with availability:
+Monday  29th of April: 13:30-15 [timezone1], 14:30-16 [timezone2]
+Tuesday 30th of April: 9-11 [timezone1], 10-12 [timezone2]
+Friday 3rd of May: 10-11 [timezone1], 11-12 [timezone2]
+
+Days without availability
+Wednesday 1nd of May is fully booked
+Thursday 2nd of May is fully booked"
